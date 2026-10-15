@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+@theme inline {
   --font-sans: "Arial", "Helvetica Neue", sans-serif;
   --font-mono: "Courier New", monospace;
   --color-background: var(--background);
@@ -13,6 +13,9 @@
   --color-border: var(--border);
   --color-ring: var(--ring);
   --radius-lg: 1rem;
+}
+
+:root {
   --background: #f4f2ed;
   --foreground: #152333;
   --primary: #bf8a3b;
@@ -31,6 +34,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, sans-serif;
+  min-height: 100vh;
 }
 button,
 input {
@@ -44,151 +48,17 @@ button {
   display: flex;
   background: var(--background);
 }
-.sidebar {
-  width: 246px;
-  flex: 0 0 246px;
-  background: #172737;
-  color: #edf1ef;
-  display: flex;
-  flex-direction: column;
-  padding: 27px 18px 18px;
-}
-.brand-row {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  padding: 0 10px 30px;
-}
-.brand-mark {
-  display: grid;
-  place-items: center;
-  size: 35px;
-  width: 35px;
-  height: 35px;
-  border: 1px solid #c19352;
-  color: #d4a35d;
-  transform: rotate(-12deg);
-}
-.brand-row b {
-  display: block;
-  font-size: 15px;
-  letter-spacing: 0.2em;
-}
-.brand-row span {
-  display: block;
-  color: #91a0a8;
-  font:
-    9px "Courier New",
-    monospace;
-  letter-spacing: 0.16em;
-  margin-top: 3px;
-}
-.pilot-mini {
-  border-top: 1px solid #30404c;
-  border-bottom: 1px solid #30404c;
-  padding: 16px 9px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-}
-.avatar {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #c49a5a;
-  color: #fffaf1;
-  font:
-    11px "Courier New",
-    monospace;
-}
+
 .avatar.small {
   width: 29px;
   height: 29px;
   font-size: 10px;
 }
-.pilot-mini b {
-  font-size: 12px;
-  display: block;
-}
-.pilot-mini span:not(.online-dot) {
-  color: #9ba7ad;
-  font-size: 11px;
-  display: block;
-  margin-top: 4px;
-}
-.online-dot {
-  margin-left: auto;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #79ae91;
-}
-.sidebar nav {
-  padding-top: 23px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-.nav-item {
-  border: 0;
-  background: transparent;
-  color: #a9b4b9;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  padding: 11px 12px;
-  border-radius: 4px;
-  text-align: left;
-  font-size: 12px;
-  width: 100%;
-}
-.nav-item:hover,
-.nav-item.active {
-  background: #243849;
-  color: #fffaf1;
-}
+
 .nav-item.active {
   box-shadow: inset 2px 0 #c19352;
 }
-.nav-item i {
-  margin-left: auto;
-  font-style: normal;
-  font:
-    10px "Courier New",
-    monospace;
-  color: #c19352;
-}
-.sidebar-bottom {
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.sidebar-footer {
-  border-top: 1px solid #30404c;
-  margin-top: 15px;
-  padding: 16px 12px 0;
-  font:
-    9px "Courier New",
-    monospace;
-  color: #7f9199;
-  position: relative;
-}
-.sidebar-footer b {
-  display: block;
-  color: #cad2d1;
-  margin-top: 5px;
-  font-weight: normal;
-}
-.sidebar-footer svg {
-  position: absolute;
-  right: 12px;
-  top: 17px;
-  color: #78a88c;
-}
+
 .main-area {
   flex: 1;
   min-width: 0;
