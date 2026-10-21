@@ -1,4 +1,4 @@
-import { Sparkles, Plus, PlaneTakeoff } from "lucide-react";
+import { Sparkles, Plus } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -21,36 +21,49 @@ const HomePage = () => {
         </button>
       </div>
       <div className="absolute right-[7%] top-[15%] w-[min(43vw - 480px)]">
-        <div className="radar">
-          <div className="radar-cross" />
-          <div className="radar-sweep" />
-          <span className="radar-point point-a" />
-          <span className="radar-point point-b" />
-          <div className="radar-label top">N 40°24&apos; W 003°42&apos;</div>
-          <div className="radar-label bottom">ALT 35,000 FT</div>
-        </div>
-        <div className="flight-line">
-          <PlaneTakeoff size={17} />
-          <span>LEMD</span>
-          <div />
-          <span>LEBL</span>
+        <div className="w-[min(38vw,390px)] aspect-square mx-auto rounded-full border border-[#c9bda6] relative opacity-90 bg-[repeating-radial-gradient(circle,transparent_0_27%,#d7cfbf_27.3%_27.6%),linear-gradient(90deg,transparent_49.7%,#d7cfbf_50%,transparent_50.3%),linear-gradient(0deg,transparent_49.7%,#d7cfbf_50%,transparent_50.3%)]">
+          <div className="absolute inset-[13%] border rounded-full border-dashed border-[#cabd9e]" />
+          <div className="absolute w-50 h-[1px] left-1/2 top-1/2 bg-[#af7c3b] origin-left animate-[sweep_5s_linear_infinite]" />
+          <span className="absolute w-[8px] h-[8px] rounded-full bg-[#b98239] shadow-[0_0_0_5px_#b9823920] left-[27%] top-[38%]" />
+          <span className="absolute w-[8px] h-[8px] rounded-full bg-[#b98239] shadow-[0_0_0_5px_#b9823920] right-[22%] top-[63%]" />
+          <div className="absolute text-[#b4a88f] text-[9px] font-[Courier_New,monospace] top-[9%] left-[32%]">
+            N 40°24&apos; W 003°42&apos;
+          </div>
+          <div className="absolute text-[#b4a88f] text-[9px] font-[Courier_New,monospace] bottom-[9%] left-[28%]">
+            ALT 35,000 FT
+          </div>
         </div>
       </div>
-      <div className="home-bottom">
+      <div className="absolute bottom-[30px] left-[9%] right-[9%] flex gap-[60px] border-t border-[#d3cec3] pt-[19px]">
         <div>
-          <span>HORAS REGISTRADAS</span>
-          <strong>
-            248<span>h</span> 36<span>m</span>
+          <span className="block text-[#526467] text-[9px] font-[Courier_New,monospace] tracking-[0.1em]">
+            HORAS REGISTRADAS
+          </span>
+          <strong className="block text-[#526467] text-[17px] font-[Georgia,serif] font-normal mt-2">
+            248
+            <span className="inline text-[#a97d42] text-xs font-[Arial]">
+              h
+            </span>{" "}
+            36
+            <span className="inline text-[#a97d42] text-xs font-[Arial]">
+              m
+            </span>
           </strong>
         </div>
         <div>
-          <span>VUELOS ESTE AÑO</span>
-          <strong>24</strong>
+          <span className="block text-[#526467] text-[9px] font-[Courier_New,monospace] tracking-[0.1em]">
+            VUELOS ESTE AÑO
+          </span>
+          <strong className="block text-[#526467] text-[17px] font-[Georgia,serif] font-normal mt-2">
+            24
+          </strong>
         </div>
         <div>
-          <span>RUTA MÁS VOLADA</span>
-          <strong>
-            LEMD <small>→</small> GCLP
+          <span className="block text-[#526467] text-[9px] font-[Courier_New,monospace] tracking-[0.1em]">
+            RUTA MÁS VOLADA
+          </span>
+          <strong className="block text-[#526467] text-[17px] font-[Georgia,serif] font-normal mt-2">
+            LEMD <small className="text-[#b98239] text-[15px]">→</small> GCLP
           </strong>
         </div>
       </div>
