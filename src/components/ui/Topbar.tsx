@@ -2,7 +2,7 @@ import { ChevronRight, LogOut } from "lucide-react";
 
 const Topbar = () => {
   return (
-    <header className="h-[73px] w-full flex items-center justify-between px-[42px] border-b border-[#dedbd4] bg-[rgba(255, 254, 250, 0.7)]">
+    <header className="h-[73px] w-full flex items-center justify-between px-[42px] border-b border-[#dedbd4] bg-[#fffefc]">
       {/* <button
             className="menu-trigger"
             onClick={() => setMenuOpen(true)}
