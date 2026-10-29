@@ -43,45 +43,61 @@ const TotalesPage = () => {
               +12.4%
             </span>
           </div>
-          <div className="progress-row">
-            <div>
+          <div className="mt-[25px]">
+            <div className="flex justify-between text-[#657078] text-xs">
               <span>Vuelo solo</span>
-              <b>162h 18m</b>
+              <b className="text-[#324653] text-[11px] font-[Courier_New,monospace] font-normal">
+                162h 18m
+              </b>
             </div>
-            <div className="progress-track">
-              <i style={{ width: "65%" }} />
+            <div className="h-[6px] mt-[10px] bg-[#e9e8e2]">
+              <i className="h-[100%] w-[65%] block bg-[#bb8a43]" />
             </div>
           </div>
-          <div className="progress-row">
-            <div>
+          <div className="mt-[25px]">
+            <div className="flex justify-between text-[#657078] text-xs">
               <span>Con instructor</span>
-              <b>86h 18m</b>
+              <b className="text-[#324653] text-[11px] font-[Courier_New,monospace] font-normal">
+                86h 18m
+              </b>
             </div>
-            <div className="progress-track">
-              <i style={{ width: "35%" }} />
+            <div className="h-[6px] mt-[10px] bg-[#e9e8e2]">
+              <i className="h-[100%] w-[35%] block bg-[#718d91]" />
             </div>
           </div>
-          <div className="milestone">
+          <div className="mt-[25px] bg-[#f2eee5] text-[#ad7937] p-3 flex items-center gap-[10px]">
             <Sparkles size={17} />
             <span>
-              <b>¡Estás a 1h 24m de tu próximo hito!</b>
-              <small>250 horas de vuelo registradas</small>
+              <b className="block text-[#80633e] text-xs">
+                ¡Estás a 1h 24m de tu próximo hito!
+              </b>
+              <small className="block text-[#9b9890] text-[10px] mt-1">
+                250 horas de vuelo registradas
+              </small>
             </span>
           </div>
         </div>
-        <div className="panel highlight-panel">
-          <span className="eyebrow">RÉCORD PERSONAL</span>
-          <h2>Tu vuelo más largo</h2>
-          <strong>4h 12m</strong>
-          <span>
-            LEMD <small>→</small> LIRF
+        <div className="p-6 bg-[#e9e3d6] border border-[#e1d9c8]">
+          <span className="flex items-center gap-[7px] text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
+            RÉCORD PERSONAL
           </span>
-          <div className="mini-route">
-            <div />
-            <div />
-            <div />
+          <h2 className="mt-[9px] text-[22px] font-400 font-serif">
+            Tu vuelo más largo
+          </h2>
+          <strong className="block text-[#263a49] text-[48px] font-serif mt-[24px] mb-[5px] font-normal">
+            4h 12m
+          </strong>
+          <span className="text-xs font-[Courier_New,monospace] text-[#718080]">
+            LEMD <small className="text-[#a77b3d]">→</small> LIRF
+          </span>
+          <div className="h-[37px] flex items-center gap-2 mt-[28px] mb-[6px] ">
+            <div className="flex-1 h-[1px] bg-[#c2ad8d] relative" />
+            <div className="flex-1 h-[1px] bg-transparent border-t border-dashed border-[#b18550] relative" />
+            <div className="flex-1 h-[1px] bg-[#c2ad8d] relative" />
           </div>
-          <small>14 de agosto, 2023 · Airbus A320</small>
+          <small className="text-[10px] text-[#98958b]">
+            14 de agosto, 2023 · Airbus A320
+          </small>
         </div>
       </div>
     </section>
