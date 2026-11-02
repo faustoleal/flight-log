@@ -7,6 +7,7 @@ import {
   Sun,
   ChevronRight,
 } from "lucide-react";
+import TotalCard from "../ui/TotalCard";
 
 const TotalesPage = () => {
   return (
@@ -27,7 +28,33 @@ const TotalesPage = () => {
           <CalendarDays size={16} /> Todo el tiempo <ChevronRight size={15} />
         </button>
       </header>
-      <div className="grid grid-cols-4 gap-[13px]"></div>
+      <div className="grid grid-cols-4 gap-[13px]">
+        <TotalCard
+          label="HORAS DE VUELO"
+          value="248h 36m"
+          detail="+18h 42m este año"
+          icon={Clock3}
+          accent
+        />
+        <TotalCard
+          label="VUELO DE DÍA"
+          value="194h 12m"
+          detail="78% del total"
+          icon={Sun}
+        />
+        <TotalCard
+          label="VUELO DE NOCHE"
+          value="54h 24m"
+          detail="22% del total"
+          icon={Moon}
+        />
+        <TotalCard
+          label="EN INSTRUCCIÓN"
+          value="86h 18m"
+          detail="35% del total"
+          icon={ShieldCheck}
+        />
+      </div>
       <div className="grid grid-cols-[1.3fr_1fr] gap-[13px] mt-[13px]">
         <div className="p-[24px] border border-[var(--border)] bg-[var(--card)]">
           <div className="flex justify-between items-start">
