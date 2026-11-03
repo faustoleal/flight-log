@@ -1,7 +1,7 @@
+import BarChart from "../ui/BarChart";
 import Header from "../ui/Header";
 
 const AnalyticsPage = () => {
-  const years = [38, 52, 31, 68, 84, 96];
   return (
     <section className="content-view">
       <Header
@@ -9,27 +9,22 @@ const AnalyticsPage = () => {
         title="Analítica"
         subtitle="Conoce tu forma de volar."
       />
-      <div className="analytics-grid">
-        <div className="panel chart-panel">
-          <div className="panel-title">
+      <div className="grid grid-cols-[1.35fr_0.8fr] gap-[13px]">
+        <div className="p-6 min-h-[340px] border border-[var(--border)] bg-[var(--card)]">
+          <div className="flex justify-between items-start">
             <div>
-              <span className="eyebrow">HORAS POR AÑO</span>
-              <h2>Tu evolución</h2>
+              <span className="flex items-center gap-[7px] text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
+                HORAS POR AÑO
+              </span>
+              <h2 className="text-[22px] font-serif font-normal mt-[9px] mx-0 mb-0">
+                Tu evolución
+              </h2>
             </div>
-            <span className="chart-total">
+            <span className="text-lg font-serif text-[#263a49]">
               248h <small>total</small>
             </span>
           </div>
-          <div className="bar-chart">
-            {years.map((height, index) => (
-              <div className="bar-col" key={index}>
-                <div className="bar" style={{ height: `${height}%` }}>
-                  <span>{[12, 28, 44, 67, 82, 98][index]}h</span>
-                </div>
-                <small>{2019 + index}</small>
-              </div>
-            ))}
-          </div>
+          <BarChart />
         </div>
         <div className="panel donut-panel">
           <div className="panel-title">
