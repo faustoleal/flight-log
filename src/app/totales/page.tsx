@@ -2,7 +2,7 @@ import Sidebar from "../../components/ui/Sidebar";
 import Topbar from "../../components/ui/Topbar";
 import TotalesPage from "../../components/views/TotalesPage";
 
-export default function Home() {
+export default function Totales() {
   return (
     <main className="min-h-screen min-w-screen flex bg-[#f4f2ed]">
       <Sidebar />
