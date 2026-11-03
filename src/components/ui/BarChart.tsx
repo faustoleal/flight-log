@@ -8,9 +8,7 @@ import {
   Title,
   Tooltip,
   Legend,
-  plugins,
 } from "chart.js";
-import { title } from "process";
 import { Bar } from "react-chartjs-2";
 
 ChartJS.register(
