@@ -1,6 +1,7 @@
 import BarChart from "../ui/BarChart";
 import DoghnutChart from "../ui/DoghnutChart";
 import Header from "../ui/Header";
+import HorizontalBarChart from "../ui/HorizontalBarChart";
 
 const AnalyticsPage = () => {
   return (
@@ -27,7 +28,7 @@ const AnalyticsPage = () => {
           </div>
           <BarChart />
         </div>
-        <div className="p-6 min-h-[340pxs] border border-[var(--border)] bg-[var(--card)]">
+        <div className="p-6 min-h-[340px] border border-[var(--border)] bg-[var(--card)]">
           <div className="flex justify-between items-start">
             <div>
               <span className="flex items-center gap-[7px] text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
@@ -65,26 +66,18 @@ const AnalyticsPage = () => {
             </ul>
           </div>
         </div>
-        <div className="panel visits-panel">
-          <div className="panel-title">
+        <div className="p-6 border border-[var(--border)] bg-[var(--card)]">
+          <div className="flex justify-between items-start">
             <div>
-              <span className="eyebrow">DESTINOS</span>
-              <h2>Lugares más visitados</h2>
+              <span className="flex items-center gap-[7px] text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
+                DESTINOS
+              </span>
+              <h2 className="text-[22px] font-serif font-normal mt-[9px] mx-0 mb-0">
+                Lugares más visitados
+              </h2>
             </div>
           </div>
-          {[
-            ["GCLP", "Gran Canaria", "18"],
-            ["LEMD", "Madrid", "14"],
-            ["GCTS", "Tenerife Sur", "9"],
-          ].map(([code, name, count]) => (
-            <div className="destination" key={code}>
-              <b>{code}</b>
-              <span>{name}</span>
-              <strong>
-                {count} <small>vuelos</small>
-              </strong>
-            </div>
-          ))}
+          <HorizontalBarChart />
         </div>
       </div>
     </section>
