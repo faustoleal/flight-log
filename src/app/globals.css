@@ -26,9 +26,13 @@
   --border: #ddd9d0;
   --ring: #bf8a3b;
 }
-* {
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   background: var(--background);
