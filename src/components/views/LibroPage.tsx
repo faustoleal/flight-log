@@ -31,17 +31,20 @@ export function LibroPage() {
           </button>
         }
       />
-      <div className="toolbar">
-        <div className="search-box">
+      <div className="flex gap-[10px] mb-[13px]">
+        <div className="flex-1 m-w-[330px] flex gap-[9px] items-center py-[10px] px-[13px] border border-[var(--border)] bg-[var(--card)] text-[#929795]">
           <Search size={16} />
-          <input placeholder="Buscar aeropuerto, avión..." />
+          <input
+            className="border-0 outline-none bg-transparent w-full text-xs text-[var(--foreground)]"
+            placeholder="Buscar aeropuerto, avión..."
+          />
         </div>
         <button className="filter-btn">
           <CalendarDays size={16} /> 2024 <ChevronRight size={15} />
         </button>
       </div>
-      <div className="table-card">
-        <table>
+      <div className="bg-[var(--card)] border border-[var(--border)] overflow-x-auto">
+        <table className="w-full min-w-[700px] text-xs border-collapse">
           <thead>
             <tr>
               <th>FECHA</th>
@@ -58,11 +61,13 @@ export function LibroPage() {
                 <td>{flight[0]}</td>
                 <td>
                   <b>{flight[1]}</b>
-                  <span className="route-arrow">→</span>
+                  <span className="text-[#b4864b] py-0 px-2">→</span>
                   <b>{flight[2]}</b>
                 </td>
                 <td>{flight[3]}</td>
-                <td className="duration">{flight[4]}</td>
+                <td className="text-xs font-[Courier_New,monospace] text-[#354a58]">
+                  {flight[4]}
+                </td>
                 <td>
                   <span
                     className={`flight-badge ${flight[5] === "Noche" ? "night" : ""}`}
@@ -70,16 +75,13 @@ export function LibroPage() {
                     {flight[5]}
                   </span>
                 </td>
-                <td>
-                  <button className="dots">···</button>
-                </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <div className="pagination">
+        <div className="flex items-center justify-between py-[17px] px-[19px] text-[#9a9d9b] text-[10px] font-[Courier_New,monospace] border-top border-[var(--border)] pagination">
           <span>Mostrando 15 de 24 vuelos</span>
-          <div>
+          <div className="flex gap-[5px]">
             <button disabled={page === 1} onClick={() => setPage(1)}>
               <ChevronLeft size={15} />
             </button>
