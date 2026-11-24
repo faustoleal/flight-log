@@ -15,7 +15,7 @@ const TotalCard = ({
 }) => {
   return (
     <article
-      className={`border p-5 min-h-[155px] ${accent ? "bg-[#203548] border-[#203548] text-[#fffaf1]" : "border-[var(--border)] bg-[var(--background)]"}`}
+      className={`border p-5 min-h-[155px] ${accent ? "bg-[#203548] border-[#203548] text-[#fffaf1]" : "border-[var(--border)] bg-[var(--card)]"}`}
     >
       <div
         className={`flex justify-between text-[9px] font-[Courier_New,monospace] tracking-[0.08em] ${accent ? "text-[#c7ad82]" : "text-[#8c9696]"}`}
