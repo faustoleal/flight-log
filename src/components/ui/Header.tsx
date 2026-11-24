@@ -26,14 +26,3 @@ const Header = ({ span, title, subtitle, button }: HeaderProps) => {
 };
 
 export default Header;
-
-<header className="section-header">
-  <div>
-    <span className="eyebrow">REGISTRO DE VUELOS</span>
-    <h1>Mis vuelos</h1>
-    <p>Todos tus vuelos, en un solo lugar.</p>
-  </div>
-  <button className="primary-btn">
-    <span>+</span> Añadir vuelo
-  </button>
-</header>;
