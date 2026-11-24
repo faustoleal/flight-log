@@ -8,26 +8,22 @@ import {
   ChevronRight,
 } from "lucide-react";
 import TotalCard from "../ui/TotalCard";
+import { Panel } from "../ui/Panel";
+import Header from "../ui/Header";
 
 const TotalesPage = () => {
   return (
     <section className="max-w-[1190px] py-[54px] px-[6%] m-auto">
-      <header className="flex justify-between items-end gap-5 mb-[34px]">
-        <div>
-          <span className="flex gap-[7px] items-center text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
-            RESUMEN DE ACTIVIDAD
-          </span>
-          <h1 className="font-serif font-normal text-[42px] tracking-[-0.04em] mt-3 mb-1 mx-0">
-            Tus totales
-          </h1>
-          <p className="text-[#7e8789] text-[13px] m-0">
-            Una vista general de tu experiencia de vuelo.
-          </p>
-        </div>
-        <button className="border border-[var(--border)] bg-[var(--card)] text-[#657076] text-[11px] py-0 px-[13px] flex items-center gap-2">
-          <CalendarDays size={16} /> Todo el tiempo <ChevronRight size={15} />
-        </button>
-      </header>
+      <Header
+        span="RESUMEN DE ACTIVIDAD"
+        title="Tus totales"
+        subtitle=" Una vista general de tu experiencia de vuelo."
+        button={
+          <button className="border border-[var(--border)] bg-[var(--card)] text-[#657076] text-[11px] py-0 px-[13px] flex items-center gap-2">
+            <CalendarDays size={16} /> Todo el tiempo <ChevronRight size={15} />
+          </button>
+        }
+      />
       <div className="grid grid-cols-4 gap-[13px]">
         <TotalCard
           label="HORAS DE VUELO"
@@ -56,20 +52,16 @@ const TotalesPage = () => {
         />
       </div>
       <div className="grid grid-cols-[1.3fr_1fr] gap-[13px] mt-[13px]">
-        <div className="p-[24px] border border-[var(--border)] bg-[var(--card)]">
-          <div className="flex justify-between items-start">
+        <Panel>
+          <Panel.Title>
             <div>
-              <span className="flex items-center gap-[7px] text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
-                PROGRESO
-              </span>
-              <h2 className="font-serif font-normal text-[22px] mt-[9px]">
-                Tu experiencia
-              </h2>
+              <Panel.Eyebrow>PROGRESO</Panel.Eyebrow>
+              <Panel.H2>Tu experiencia</Panel.H2>
             </div>
             <span className="text-xs text-[#679477] font-[Courier_New,monospace]">
               +12.4%
             </span>
-          </div>
+          </Panel.Title>
           <div className="mt-[25px]">
             <div className="flex justify-between text-[#657078] text-xs">
               <span>Vuelo solo</span>
@@ -103,14 +95,10 @@ const TotalesPage = () => {
               </small>
             </span>
           </div>
-        </div>
-        <div className="p-6 bg-[#e9e3d6] border border-[#e1d9c8]">
-          <span className="flex items-center gap-[7px] text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
-            RÉCORD PERSONAL
-          </span>
-          <h2 className="mt-[9px] text-[22px] font-400 font-serif">
-            Tu vuelo más largo
-          </h2>
+        </Panel>
+        <Panel className="!bg-[#e9e3d6] !border-[#e1d9c8]">
+          <Panel.Eyebrow>RÉCORD PERSONAL</Panel.Eyebrow>
+          <Panel.H2>Tu vuelo más largo</Panel.H2>
           <strong className="block text-[#263a49] text-[48px] font-serif mt-[24px] mb-[5px] font-normal">
             4h 12m
           </strong>
@@ -125,7 +113,7 @@ const TotalesPage = () => {
           <small className="text-[10px] text-[#98958b]">
             14 de agosto, 2023 · Airbus A320
           </small>
-        </div>
+        </Panel>
       </div>
     </section>
   );
