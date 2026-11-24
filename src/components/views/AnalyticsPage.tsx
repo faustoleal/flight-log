@@ -2,6 +2,7 @@ import BarChart from "../ui/BarChart";
 import DoghnutChart from "../ui/DoghnutChart";
 import Header from "../ui/Header";
 import HorizontalBarChart from "../ui/HorizontalBarChart";
+import { Panel } from "../ui/Panel";
 
 const AnalyticsPage = () => {
   return (
@@ -12,33 +13,25 @@ const AnalyticsPage = () => {
         subtitle="Conoce tu forma de volar."
       />
       <div className="grid grid-cols-[1.35fr_0.8fr] gap-[13px]">
-        <div className="p-6 min-h-[340px] border border-[var(--border)] bg-[var(--card)]">
-          <div className="flex justify-between items-start">
+        <Panel className="min-h-[340px]">
+          <Panel.Title>
             <div>
-              <span className="flex items-center gap-[7px] text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
-                HORAS POR AÑO
-              </span>
-              <h2 className="text-[22px] font-serif font-normal mt-[9px] mx-0 mb-0">
-                Tu evolución
-              </h2>
+              <Panel.Eyebrow>HORAS POR AÑO</Panel.Eyebrow>
+              <Panel.H2>Tu evolución</Panel.H2>
             </div>
             <span className="text-lg font-serif text-[#263a49]">
               248h <small>total</small>
             </span>
-          </div>
+          </Panel.Title>
           <BarChart />
-        </div>
-        <div className="p-6 min-h-[340px] border border-[var(--border)] bg-[var(--card)]">
-          <div className="flex justify-between items-start">
+        </Panel>
+        <Panel className="min-h-[340px]">
+          <Panel.Title>
             <div>
-              <span className="flex items-center gap-[7px] text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
-                POR AERONAVE
-              </span>
-              <h2 className="text-[22px] font-serif font-normal mt-[9px] mx-0 mb-0">
-                Flota
-              </h2>
+              <Panel.Eyebrow>POR AERONAVE</Panel.Eyebrow>
+              <Panel.H2>Flota</Panel.H2>
             </div>
-          </div>
+          </Panel.Title>
           <div className="flex items-center gap-[25px] mt-[34px]">
             <DoghnutChart />
             <ul className="list-none p-0 m-0 flex-1">
@@ -65,20 +58,16 @@ const AnalyticsPage = () => {
               </li>
             </ul>
           </div>
-        </div>
-        <div className="p-6 border border-[var(--border)] bg-[var(--card)]">
-          <div className="flex justify-between items-start">
+        </Panel>
+        <Panel>
+          <Panel.Title>
             <div>
-              <span className="flex items-center gap-[7px] text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
-                DESTINOS
-              </span>
-              <h2 className="text-[22px] font-serif font-normal mt-[9px] mx-0 mb-0">
-                Lugares más visitados
-              </h2>
+              <Panel.Eyebrow>DESTINOS</Panel.Eyebrow>
+              <Panel.H2>Lugares más visitados</Panel.H2>
             </div>
-          </div>
+          </Panel.Title>
           <HorizontalBarChart />
-        </div>
+        </Panel>
       </div>
     </section>
   );
