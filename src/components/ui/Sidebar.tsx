@@ -9,12 +9,13 @@ import {
   Clock3,
   BarChart3,
 } from "lucide-react";
+import Link from "next/link";
 
 export const navItems = [
-  { id: "home", label: "Inicio", icon: Compass },
-  { id: "flights", label: "Mis vuelos", icon: Table2 },
-  { id: "totals", label: "Totales", icon: Clock3 },
-  { id: "analytics", label: "Analítica", icon: BarChart3 },
+  { id: "home", route: "/", label: "Inicio", icon: Compass },
+  { id: "flights", route: "/libro", label: "Mis vuelos", icon: Table2 },
+  { id: "totals", route: "/totales", label: "Totales", icon: Clock3 },
+  { id: "analytics", route: "/analisis", label: "Analítica", icon: BarChart3 },
 ];
 
 const Sidebar = () => {
@@ -54,9 +55,10 @@ const Sidebar = () => {
         className="pt-6 flex flex-col gap-2"
         aria-label="Navegación principal"
       >
-        {navItems.map(({ id, label, icon: Icon }) => (
-          <button
+        {navItems.map(({ id, route, label, icon: Icon }) => (
+          <Link
             key={id}
+            href={route}
             className={
               "border-0 bg-transparent text-[#a9b4b9] flex gap-3 items-center py-[11px] px-3 rounded-[4px] text-left w-full hover:bg-[#243849] hover:text-[#fffaf1]"
             }
@@ -68,7 +70,7 @@ const Sidebar = () => {
                 24
               </i>
             )}
-          </button>
+          </Link>
         ))}
       </nav>
       <div className="mt-auto flex flex-col gap-[6px]">
