@@ -20,7 +20,7 @@ const AnalyticsPage = () => {
               <Panel.H2>Tu evolución</Panel.H2>
             </div>
             <span className="text-lg font-serif text-[#263a49]">
-              248h <small>total</small>
+              369h <small>total</small>
             </span>
           </Panel.Title>
           <BarChart />
@@ -37,21 +37,21 @@ const AnalyticsPage = () => {
             <ul className="list-none p-0 m-0 flex-1">
               <li className="flex items-center gap-[7px] text-[#707b7e] text-[10px] py-[9px] border-b border-[#eceae5]">
                 <i className="w-[7px] h-[7px] rounded-full bg-[#c19250]" />
-                LV-WHU{" "}
+                LV-ABC{" "}
                 <b className="ml-auto text-[10px] font-['Courier_New'] text-[#364e5a]">
                   28%
                 </b>
               </li>
               <li className="flex items-center gap-[7px] text-[#707b7e] text-[10px] py-[9px] border-b border-[#eceae5]">
                 <i className="w-[7px] h-[7px] rounded-full bg-[#627e84]" />
-                LV-CMC{" "}
+                LV-DEF{" "}
                 <b className="ml-auto text-[10px] font-['Courier_New'] text-[#364e5a]">
                   57%
                 </b>
               </li>
               <li className="flex items-center gap-[7px] text-[#707b7e] text-[10px] py-[9px] border-b border-[#eceae5]">
                 <i className="w-[7px] h-[7px] rounded-full bg-[#aeb6ad]" />
-                LV-NUF{" "}
+                LV-GHI{" "}
                 <b className="ml-auto text-[10px] font-['Courier_New'] text-[#364e5a]">
                   14%
                 </b>

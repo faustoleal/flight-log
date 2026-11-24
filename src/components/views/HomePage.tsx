@@ -2,7 +2,7 @@ import { Sparkles, Plus } from "lucide-react";
 
 const HomePage = () => {
   return (
-    <section className="min-h-[calc(100vh - 73px)] bg-[#e9e5dc] relative overflow-hidden px-[9%] pb-[38px] pt-[clamp(50px,9vw,105px)] after:absolute after:right-[5%] after:top-[32%] after:rotate-90 after:content-['FLIGHT_RECORD_/_005'] after:font-['Courier_New',monospace] after:text-[10px] after:tracking-[0.22em] after:text-[#c9c4b8]">
+    <section className="min-h-[calc(100vh - 73px)]  bg-[#e9e5dc] relative overflow-hidden px-[9%] pb-[38px] pt-[clamp(50px,9vw,105px)] after:absolute after:right-[5%] after:top-[32%] after:rotate-90 after:content-['FLIGHT_RECORD_/_005'] after:font-['Courier_New',monospace] after:text-[10px] after:tracking-[0.22em] after:text-[#c9c4b8]">
       <div className="max-w-[440px] relative z-1">
         <span className="eyebrow">
           <Sparkles size={14} /> TU BITÁCORA DIGITAL
@@ -40,14 +40,10 @@ const HomePage = () => {
             HORAS REGISTRADAS
           </span>
           <strong className="block text-[#526467] text-[17px] font-[Georgia,serif] font-normal mt-2">
-            248
+            369
             <span className="inline text-[#a97d42] text-xs font-[Arial]">
               h
             </span>{" "}
-            36
-            <span className="inline text-[#a97d42] text-xs font-[Arial]">
-              m
-            </span>
           </strong>
         </div>
         <div>
@@ -55,7 +51,7 @@ const HomePage = () => {
             VUELOS ESTE AÑO
           </span>
           <strong className="block text-[#526467] text-[17px] font-[Georgia,serif] font-normal mt-2">
-            24
+            96
           </strong>
         </div>
         <div>
@@ -63,7 +59,7 @@ const HomePage = () => {
             RUTA MÁS VOLADA
           </span>
           <strong className="block text-[#526467] text-[17px] font-[Georgia,serif] font-normal mt-2">
-            LEMD <small className="text-[#b98239] text-[15px]">→</small> GCLP
+            ATE <small className="text-[#b98239] text-[15px]">→</small> PER
           </strong>
         </div>
       </div>
