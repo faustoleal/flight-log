@@ -166,12 +166,12 @@ button {
 .table-card {
   overflow-x: auto;
 }
-table {
+/* table {
   width: 100%;
   border-collapse: collapse;
   font-size: 12px;
   min-width: 700px;
-}
+} */
 th {
   padding: 15px 19px;
   text-align: left;
