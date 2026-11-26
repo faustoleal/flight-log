@@ -2,9 +2,9 @@ import { Sparkles, Plus } from "lucide-react";
 
 const HomePage = () => {
   return (
-    <section className="min-h-[calc(100vh - 73px)]  bg-[#e9e5dc] relative overflow-hidden px-[9%] pb-[38px] pt-[clamp(50px,9vw,105px)] after:absolute after:right-[5%] after:top-[32%] after:rotate-90 after:content-['FLIGHT_RECORD_/_005'] after:font-['Courier_New',monospace] after:text-[10px] after:tracking-[0.22em] after:text-[#c9c4b8]">
+    <section className="min-h-[calc(-73px_+_100vh)]  bg-[#e9e5dc] relative overflow-hidden px-[9%] pb-[38px] pt-[clamp(50px,9vw,105px)] after:absolute after:right-[5%] after:top-[32%] after:rotate-90 after:content-['FLIGHT_RECORD_/_005'] after:font-['Courier_New',monospace] after:text-[10px] after:tracking-[0.22em] after:text-[#c9c4b8]">
       <div className="max-w-[440px] relative z-1">
-        <span className="eyebrow">
+        <span className="flex items-center gap-[7px] text-[#ba8235] text-[10px] font-[Courier_New,monospace] tracking-[0.14em]">
           <Sparkles size={14} /> TU BITÁCORA DIGITAL
         </span>
         <h1 className="font-['Georgia',serif] font-normal leading-[0.9] text-[clamp(52px,7vw,88px)] text-[#203548] tracking-[-0.07em] my-[27px] mx-0">
