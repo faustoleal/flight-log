@@ -4,7 +4,7 @@ import HomePage from "../components/views/HomePage";
 
 export default function Home() {
   return (
-    <main className="min-h-screen min-w-screen flex bg-[#f4f2ed]">
+    <main className="min-h-screen flex bg-[var(--background)]">
       <Sidebar />
       <div className="flex-1 min-w-[0]">
         <Topbar />
